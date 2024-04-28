@@ -1,0 +1,7 @@
+{
+  "Voltage": "220.01",
+  "Current": "1.13",
+  "Power": "1.01",
+  "Consumption": "1.48",
+  "Polarity": "1"
+}

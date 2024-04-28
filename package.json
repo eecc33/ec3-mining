@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "serve": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build"
+  },
+  "dependencies": {
+    "@peaq-network/sdk": "^0.4.5",
+    "@polkadot/api": "^10.12.1",
+    "bip39": "^3.1.0",
+    "ethereum-hdwallet": "^0.1.2",
+    "web3": "^4.6.0"
+  }
+}
