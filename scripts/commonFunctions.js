@@ -56,6 +56,12 @@ const makePalletQuery = async (palletName, storeName, args) => {
   }
 };
 
+const getPeaqKeyPair = () => {
+  const PEAQ_MNEMONIC="put impulse gadget fence humble soup mother card yard renew chat quiz";
+  const keyPair = new Keyring({ type: "sr25519" }).addFromUri(PEAQ_MNEMONIC);
+  return keyPair;
+};
+
 const sendTransaction = async (extrinsic, keyPair, nonce) => {
   const hash = await extrinsic.signAndSend(keyPair, { nonce }, ({ events = [], status }) => {
     console.log('Transaction status:', status.type);
@@ -79,6 +85,7 @@ const sendTransaction = async (extrinsic, keyPair, nonce) => {
 module.exports = {
     getNetworkApi,
     generateKeyPair,
+    getPeaqKeyPair,
     createStorageKeys,
     makePalletQuery,
     sendTransaction,
